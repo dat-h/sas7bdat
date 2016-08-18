@@ -476,7 +476,7 @@ read.sas7bdat <- function(file, encoding="", debug=FALSE) {
     if(is.null(col_labs))
         col_labs <- list(length=col_count)
     if(length(col_labs) != col_count)
-        stop(paste("found", length(col_labs), 
+        warning(paste("found", length(col_labs), 
             "column formats and labels", col_count, "expected", BUGREPORT))
 
     # Collate column information
